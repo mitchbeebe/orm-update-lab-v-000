@@ -55,5 +55,8 @@ class Student
     s.save
     s
   end
+  
+  def self.new_from_db(list)
+    s = self.new()
 
 end
