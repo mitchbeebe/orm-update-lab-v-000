@@ -49,5 +49,8 @@ class Student
     SQL
     DB[:conn].execute(sql, @name, @grade, @id)
   end
+  
+  def self.create(name, grade)
+    s = self.new(name, grade)
 
 end
