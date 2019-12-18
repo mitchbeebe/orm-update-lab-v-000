@@ -34,6 +34,7 @@ class Student
       values (?, ?)
     SQL
     DB[:conn].execute(sql, @name, @grade)
+    @id = DB[:conn].execute("select last_")
   end
 
 end
