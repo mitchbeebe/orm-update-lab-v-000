@@ -21,5 +21,7 @@ class Student
         , grade integer
       )
     SQL
+    DB[:conn].execute(sql)
+  end
 
 end
