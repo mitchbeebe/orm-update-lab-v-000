@@ -57,6 +57,11 @@ class Student
   end
   
   def self.new_from_db(list)
-    s = self.new()
+    s = self.new
+    s.id = list[0]
+    s.name = list[1]
+    s.grade = list[2]
+    s
+  end
 
 end
