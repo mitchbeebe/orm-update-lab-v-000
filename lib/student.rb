@@ -60,5 +60,9 @@ class Student
     s = self.new(list[0], list[1], list[2])
     s
   end
+  
+  def self.find_by_name(name)
+    DB[:conn].execute("select * from students where name = ?", name).first[0][0]
+  end
 
 end
