@@ -29,6 +29,9 @@ class Student
   end
   
   def save
+    if @id
+      self.update
+    end
     sql = <<-SQL
       insert into students (name, grade)
       values (?, ?)
